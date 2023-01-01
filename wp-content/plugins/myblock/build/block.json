@@ -13,8 +13,23 @@
   "attributes": {
     "title1": {
       "type": "string",
-      "source": "text",
+      "source": "html",
       "selector": ".title1"
+    },
+    "title2": {
+      "type": "string",
+      "source": "html",
+      "selector": ".title2"
+    },
+    "description": {
+      "type": "string",
+      "source": "html",
+      "selector": ".description"
+    },
+    "btncta": {
+      "type": "string",
+      "source": "html",
+      "selector": ".btncta"
     }
   },
   "textdomain": "myblock",

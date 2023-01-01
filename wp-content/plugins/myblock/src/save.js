@@ -15,19 +15,20 @@ import { useBlockProps } from "@wordpress/block-editor";
  *
  * @return {WPElement} Element to render.
  */
-export default function save() {
+export default function save(props) {
+	const blockProps = useBlockProps.save();
   return (
-    <div className="container-myblock">
+    <div className="container-myblock" {...blockProps}>
       <div className="first-div-myblock">
-        <p {...useBlockProps.save()}>
+        <p>
           {"My Block – hello from the saved content! is soo good"}
         </p>
       </div>
       <div className="second-div-myblock">
-        <h1 className="title1-myblock"> {"Mon titre"}</h1>
-        <h3 className="title2-myblock">{"Mon sous titre"}</h3>
-        <p className="description-myblock">{"Ma description"}</p>
-        <button className="btn-myblock">{"My button is tshil"}</button>
+        <h1 className="title1"> {props.attributes.title1}</h1>
+        <h3 className="title2"> {props.attributes.title2}</h3>
+		<p className="description">{props.attributes.description}</p>
+        <button className="btn-myblock">{"En savoir plus"}</button>
       </div>
     </div>
   );

@@ -9,5 +9,28 @@
 .wp-block-create-block-myblock {
   border: 1px dotted #f00;
 }
+.wp-block-create-block-myblock .container-myblock {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.wp-block-create-block-myblock .container-myblock .second-div-myblock {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+}
+.wp-block-create-block-myblock .container-myblock .second-div-myblock .title1-myblock {
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+.wp-block-create-block-myblock .container-myblock .second-div-myblock .title2-myblock {
+  font-size: 2rem;
+  font-weight: 500;
+}
+.wp-block-create-block-myblock .container-myblock .second-div-myblock .btn-myblock {
+  border-radius: 20px;
+  font-size: 1rem;
+}
 
 /*# sourceMappingURL=index.css.map*/
