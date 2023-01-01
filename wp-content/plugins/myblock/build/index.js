@@ -59,7 +59,6 @@ __webpack_require__.r(__webpack_exports__);
 function Edit(props) {
   const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.useBlockProps)();
   const onSelectImage = imgProps => {
-    console.log(imgProps);
     props.setAttributes({
       imgID: imgProps.id,
       imgURL: imgProps.url,
@@ -87,14 +86,14 @@ function Edit(props) {
       } = _ref;
       return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.Placeholder, {
         icon: "images-alt",
-        label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)("Photo", "capitainewp-gut-bases"),
-        instructions: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)("Select a picture", "capitainewp-gut-bases")
+        label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)("Photo", "myBlock"),
+        instructions: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)("Sélectionner une image", "myBlock")
       }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.Button, {
         isSecondary: true,
         isLarge: true,
         onClick: open,
         icon: "upload"
-      }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)("Import", "capitainewp-gut-bases")));
+      }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)("Importer", "myBlock")));
     }
   })) : (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("p", {
     className: "myblock-img-wrapper"

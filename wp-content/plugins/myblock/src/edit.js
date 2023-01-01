@@ -38,7 +38,6 @@ import "./editor.scss";
 export default function Edit(props) {
   const blockProps = useBlockProps();
   const onSelectImage = (imgProps) => {
-    console.log(imgProps);
     props.setAttributes({
       imgID: imgProps.id,
       imgURL: imgProps.url,
@@ -66,11 +65,11 @@ export default function Edit(props) {
               render={({ open }) => (
                 <Placeholder
                   icon="images-alt"
-                  label={__("Photo", "capitainewp-gut-bases")}
-                  instructions={__("Select a picture", "capitainewp-gut-bases")}
+                  label={__("Photo", "myBlock")}
+                  instructions={__("Sélectionner une image", "myBlock")}
                 >
                   <Button isSecondary isLarge onClick={open} icon="upload">
-                    {__("Import", "capitainewp-gut-bases")}
+                    {__("Importer", "myBlock")}
                   </Button>
                 </Placeholder>
               )}
