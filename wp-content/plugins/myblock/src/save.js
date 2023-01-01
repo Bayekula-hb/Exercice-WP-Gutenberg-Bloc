@@ -5,6 +5,8 @@
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
 import { useBlockProps } from "@wordpress/block-editor";
+import { Button } from "@wordpress/components";
+
 
 /**
  * The save function defines the way in which the different attributes should
@@ -28,7 +30,7 @@ export default function save(props) {
         <h1 className="title1"> {props.attributes.title1}</h1>
         <h3 className="title2"> {props.attributes.title2}</h3>
 		<p className="description">{props.attributes.description}</p>
-        <button className="btn-myblock">{"En savoir plus"}</button>
+        <button className="btncta">{props.attributes.btncta}</button>
       </div>
     </div>
   );

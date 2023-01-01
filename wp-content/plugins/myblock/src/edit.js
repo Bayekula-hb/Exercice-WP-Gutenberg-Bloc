@@ -63,7 +63,13 @@ export default function Edit(props) {
           onChange={(description) => props.setAttributes({ description })}
           placeholder={__("Ma description", "myBlock")}
         />
-        <button className="btn-myblock">{"En savoir plus"}</button>
+        <RichText
+          tagName="p"
+          value={props.attributes.btncta}
+          className="btncta"
+          onChange={(btncta) => props.setAttributes({ btncta })}
+          placeholder={__("Mon bouton", "myBlock")}
+        />
       </div>
     </div>
   );
