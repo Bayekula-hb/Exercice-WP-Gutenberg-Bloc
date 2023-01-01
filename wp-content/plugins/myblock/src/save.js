@@ -23,7 +23,7 @@ export default function save(props) {
     <div className="container-myblock" {...blockProps}>
       <div className="first-div-myblock">
         <p>
-          {"My Block – hello from the saved content! is soo good"}
+          <img src={props.attributes.imgURL} alt={props.attributes.imgAlt} />
         </p>
       </div>
       <div className="second-div-myblock">

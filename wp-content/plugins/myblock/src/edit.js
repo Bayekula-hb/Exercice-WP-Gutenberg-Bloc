@@ -11,7 +11,13 @@ import { __ } from "@wordpress/i18n";
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import { useBlockProps, RichText } from "@wordpress/block-editor";
+import {
+  useBlockProps,
+  RichText,
+  MediaUpload,
+  MediaUploadCheck,
+} from "@wordpress/block-editor";
+import { Placeholder, Button } from "@wordpress/components";
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -31,15 +37,63 @@ import "./editor.scss";
  */
 export default function Edit(props) {
   const blockProps = useBlockProps();
+  const onSelectImage = (imgProps) => {
+    console.log(imgProps);
+    props.setAttributes({
+      imgID: imgProps.id,
+      imgURL: imgProps.url,
+      imgAlt: imgProps.alt,
+    });
+  };
 
-  const onChangeContentTitle1 = (title1) => {
-    props.setAttributes({ title1: title1 });
+  const onRemoveImage = () => {
+    props.setAttributes({
+      imgID: null,
+      imgURL: null,
+      imgAlt: null,
+    });
   };
 
   return (
     <div className="container-myblock" {...useBlockProps.save()}>
       <div className="first-div-myblock">
-        <p>{"My Block – hello from the saved content! is soo good"}</p>
+        {!props.attributes.imgID ? (
+          <MediaUploadCheck>
+            <MediaUpload
+              onSelect={onSelectImage}
+              allowedTypes={["image"]}
+              value={props.attributes.imgID}
+              render={({ open }) => (
+                <Placeholder
+                  icon="images-alt"
+                  label={__("Photo", "capitainewp-gut-bases")}
+                  instructions={__("Select a picture", "capitainewp-gut-bases")}
+                >
+                  <Button isSecondary isLarge onClick={open} icon="upload">
+                    {__("Import", "capitainewp-gut-bases")}
+                  </Button>
+                </Placeholder>
+              )}
+            />
+          </MediaUploadCheck>
+        ) : (
+          <p className="myblock-img-wrapper">
+            <img
+              src={props.attributes.imgURL}
+              alt={props.attributes.imgAlt}
+            />
+
+            {props.isSelected && (
+              <Button
+                className="myblock-del-img"
+                onClick={onRemoveImage}
+                icon="dismiss"
+              >
+                {__("Supprimer l'image", "myblock")}
+              </Button>
+            )}
+          </p>
+        )}
       </div>
       <div className="second-div-myblock">
         <RichText

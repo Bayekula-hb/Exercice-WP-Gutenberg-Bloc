@@ -6,10 +6,10 @@
  */
 
 .wp-block-create-block-myblock {
-  //   background-color: #21759b;
+//   background-color: #21759b;
   color: #000;
   padding: 2px;
-  .myblock-container {
+  .container-myblock {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -18,15 +18,15 @@
       display: flex;
       flex-direction: column;
       align-content: flex-start;
-      .title1-myblock {
+      .title1 {
         font-size: 3.2rem;
         font-weight: 700;
       }
-      .title2-myblock {
+      .title2 {
         font-size: 2rem;
         font-weight: 500;
       }
-      .btn-myblock {
+      .btncta {
         border-radius: 20px;
         font-size: 1rem;
       }

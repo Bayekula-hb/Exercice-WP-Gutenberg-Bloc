@@ -14,7 +14,7 @@
     "title1": {
       "type": "string",
       "source": "html",
-      "selector": ".title1"
+      "selector": "title1"
     },
     "title2": {
       "type": "string",
@@ -30,6 +30,22 @@
       "type": "string",
       "source": "html",
       "selector": ".btncta"
+    },
+    "imgID": {
+      "type": "number",
+      "default": null
+    },
+    "imgURL": {
+      "type": "string",
+      "source": "attribute",
+      "attribute": "src",
+      "selector": "img"
+    },
+    "imgAlt": {
+      "type": "string",
+      "source": "attribute",
+      "attribute": "alt",
+      "selector": "img"
     }
   },
   "textdomain": "myblock",
