@@ -16,8 +16,20 @@ import {
   RichText,
   MediaUpload,
   MediaUploadCheck,
+  BlockControls,
+  AlignmentToolbar,
+  InspectorControls,
+  PanelColorSettings,
 } from "@wordpress/block-editor";
-import { Placeholder, Button } from "@wordpress/components";
+import {
+  Placeholder,
+  PanelBody,
+  PanelColor,
+  ButtonGroup,
+  Button,
+  ToggleControl,
+  RangeControl,
+} from "@wordpress/components";
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -77,10 +89,7 @@ export default function Edit(props) {
           </MediaUploadCheck>
         ) : (
           <p className="myblock-img-wrapper">
-            <img
-              src={props.attributes.imgURL}
-              alt={props.attributes.imgAlt}
-            />
+            <img src={props.attributes.imgURL} alt={props.attributes.imgAlt} />
 
             {props.isSelected && (
               <Button
