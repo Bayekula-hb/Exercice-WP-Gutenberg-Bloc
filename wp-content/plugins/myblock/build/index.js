@@ -40,6 +40,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
  * Those files can contain any CSS code that gets applied to the editor.
@@ -72,7 +73,7 @@ function Edit(props) {
       imgAlt: null
     });
   };
-  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("div", (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("div", (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
     className: "container-myblock"
   }, _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.useBlockProps.save()), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("div", {
     className: "first-div-myblock"
@@ -113,7 +114,8 @@ function Edit(props) {
     onChange: title1 => props.setAttributes({
       title1
     }),
-    placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)("Mon titre", "myBlock")
+    placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)("Mon titre", "myBlock"),
+    allowedFormats: ["core/bold", "core/italic", "core/link"]
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.RichText, {
     tagName: "h3",
     value: props.attributes.title2,
@@ -138,7 +140,7 @@ function Edit(props) {
       btncta
     }),
     placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)("Mon bouton", "myBlock")
-  })));
+  }))));
 }
 
 /***/ }),
@@ -381,7 +383,7 @@ function _extends() {
   \************************/
 /***/ ((module) => {
 
-module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"create-block/myblock","version":"0.1.0","title":"My Block","category":"widgets","icon":"smiley","description":"Example block scaffolded with Create Block tool.","supports":{"html":false},"attributes":{"title1":{"type":"string","source":"html","selector":"title1"},"title2":{"type":"string","source":"html","selector":".title2"},"description":{"type":"string","source":"html","selector":".description"},"btncta":{"type":"string","source":"html","selector":".btncta"},"imgID":{"type":"number","default":null},"imgURL":{"type":"string","source":"attribute","attribute":"src","selector":"img"},"imgAlt":{"type":"string","source":"attribute","attribute":"alt","selector":"img"}},"textdomain":"myblock","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"create-block/myblock","version":"0.1.0","title":"My Block","category":"widgets","icon":"smiley","description":"Example block scaffolded with Create Block tool.","supports":{"html":false,"align":["left","center","right"]},"attributes":{"title1":{"type":"string","source":"html","selector":"title1"},"title2":{"type":"string","source":"html","selector":".title2"},"description":{"type":"string","source":"html","selector":".description"},"btncta":{"type":"string","source":"html","selector":".btncta"},"imgID":{"type":"number","default":null},"imgURL":{"type":"string","source":"attribute","attribute":"src","selector":"img"},"imgAlt":{"type":"string","source":"attribute","attribute":"alt","selector":"img"}},"textdomain":"myblock","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
 
 /***/ })
 

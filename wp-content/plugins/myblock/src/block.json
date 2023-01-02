@@ -8,7 +8,9 @@
 	"icon": "smiley",
 	"description": "Example block scaffolded with Create Block tool.",
 	"supports": {
-		"html": false
+		"html": false,
+		"align":true,
+		"align":["left", "center", "right"]
 	},
 	"attributes": {
 		"title1": {
