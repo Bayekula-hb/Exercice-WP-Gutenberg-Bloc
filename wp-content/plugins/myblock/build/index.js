@@ -245,15 +245,23 @@ function save(props) {
     alt: props.attributes.imgAlt
   }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("div", {
     className: "second-div-myblock"
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("h1", {
-    className: "title1"
-  }, " ", props.attributes.title1), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("h3", {
-    className: "title2"
-  }, " ", props.attributes.title2), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("p", {
-    className: "description"
-  }, props.attributes.description), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("button", {
-    className: "btncta"
-  }, props.attributes.btncta)));
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText.Content, {
+    tagName: "h1",
+    className: "title1",
+    value: props.attributes.title1
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText.Content, {
+    tagName: "h3",
+    className: "title2",
+    value: props.attributes.title2
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText.Content, {
+    tagName: "p",
+    className: "description",
+    value: props.attributes.description
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText.Content, {
+    tagName: "button",
+    className: "btncta",
+    value: props.attributes.btncta
+  })));
 }
 
 /***/ }),

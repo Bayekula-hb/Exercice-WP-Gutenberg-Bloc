@@ -56,7 +56,6 @@ export default function Edit(props) {
       imgAlt: imgProps.alt,
     });
   };
-
   const onRemoveImage = () => {
     props.setAttributes({
       imgID: null,

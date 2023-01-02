@@ -4,7 +4,7 @@
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import { useBlockProps } from "@wordpress/block-editor";
+import { useBlockProps, RichText } from "@wordpress/block-editor";
 import { Button } from "@wordpress/components";
 
 
@@ -18,7 +18,9 @@ import { Button } from "@wordpress/components";
  * @return {WPElement} Element to render.
  */
 export default function save(props) {
+  
 	const blockProps = useBlockProps.save();
+  
   return (
     <div className="container-myblock" {...blockProps}>
       <div className="first-div-myblock">
@@ -27,10 +29,26 @@ export default function save(props) {
         </p>
       </div>
       <div className="second-div-myblock">
-        <h1 className="title1"> {props.attributes.title1}</h1>
-        <h3 className="title2"> {props.attributes.title2}</h3>
-		<p className="description">{props.attributes.description}</p>
-        <button className="btncta">{props.attributes.btncta}</button>
+        <RichText.Content
+          tagName="h1"
+          className="title1"
+          value={props.attributes.title1}
+        />
+        <RichText.Content
+          tagName="h3"
+          className="title2"
+          value={props.attributes.title2}
+        />
+        <RichText.Content
+          tagName="p"
+          className="description"
+          value={props.attributes.description}
+        />
+        <RichText.Content
+          tagName="button"
+          className="btncta"
+          value={props.attributes.btncta}
+        />
       </div>
     </div>
   );
