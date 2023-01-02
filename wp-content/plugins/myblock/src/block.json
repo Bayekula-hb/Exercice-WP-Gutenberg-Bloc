@@ -42,6 +42,8 @@
 			"source": "attribute",
 			"attribute": "alt",
 			"selector": "img"
+		},"alignDiv":{
+			  "type": "string"
 		}
 	},
 	"textdomain": "myblock",

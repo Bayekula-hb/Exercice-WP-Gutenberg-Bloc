@@ -22,7 +22,7 @@ export default function save(props) {
     props.attributes;
   return (
     <div className="container-myblock" {...blockProps}>
-      <div className="first-div-myblock">
+      <div className="first-div-myblock" style={ { textAlign: props.attributes.alignDiv } }>
         <img src={imgURL} alt={imgAlt} />
       </div>
       <div className="second-div-myblock">
