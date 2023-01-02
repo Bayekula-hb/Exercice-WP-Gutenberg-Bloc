@@ -69,8 +69,8 @@ export default function Edit(props) {
     <Fragment>
       <BlockControls>
         <AlignmentToolbar
-          value={props.attributes.alignDiv}
-          onChange={(alignDiv) => props.setAttributes({ alignDiv })}
+          value={props.attributes.alignImg}
+          onChange={(alignImg) => props.setAttributes({ alignImg })}
         />
       </BlockControls>
       <div className="container-myblock" {...useBlockProps.save()}>
@@ -81,7 +81,7 @@ export default function Edit(props) {
                 onSelect={onSelectImage}
                 allowedTypes={["image"]}
                 value={props.attributes.imgID}
-                style={ { textAlign: props.attributes.alignDiv } }
+                style={ { textAlign: props.attributes.alignImg } }
                 render={({ open }) => (
                   <Placeholder
                     icon="images-alt"

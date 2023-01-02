@@ -52,7 +52,7 @@
       "attribute": "alt",
       "selector": "img"
     },
-    "alignDiv": {
+    "alignImg": {
       "type": "string"
     }
   },

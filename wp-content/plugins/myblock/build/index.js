@@ -74,9 +74,9 @@ function Edit(props) {
     });
   };
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.BlockControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.AlignmentToolbar, {
-    value: props.attributes.alignDiv,
-    onChange: alignDiv => props.setAttributes({
-      alignDiv
+    value: props.attributes.alignImg,
+    onChange: alignImg => props.setAttributes({
+      alignImg
     })
   })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("div", (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
     className: "container-myblock"
@@ -87,7 +87,7 @@ function Edit(props) {
     allowedTypes: ["image"],
     value: props.attributes.imgID,
     style: {
-      textAlign: props.attributes.alignDiv
+      textAlign: props.attributes.alignImg
     },
     render: _ref => {
       let {
@@ -247,6 +247,7 @@ __webpack_require__.r(__webpack_exports__);
 function save(props) {
   const blockProps = _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps.save();
   const {
+    alignImg,
     imgURL,
     imgAlt,
     title1,
@@ -259,7 +260,7 @@ function save(props) {
   }, blockProps), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("div", {
     className: "first-div-myblock",
     style: {
-      textAlign: props.attributes.alignDiv
+      textAlign: alignImg
     }
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("img", {
     src: imgURL,
@@ -394,7 +395,7 @@ function _extends() {
   \************************/
 /***/ ((module) => {
 
-module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"create-block/myblock","version":"0.1.0","title":"My Block","category":"widgets","icon":"smiley","description":"Example block scaffolded with Create Block tool.","supports":{"html":false,"align":["left","center","right"]},"attributes":{"title1":{"type":"string","source":"html","selector":"title1"},"title2":{"type":"string","source":"html","selector":".title2"},"description":{"type":"string","source":"html","selector":".description"},"btncta":{"type":"string","source":"html","selector":".btncta"},"imgID":{"type":"number","default":null},"imgURL":{"type":"string","source":"attribute","attribute":"src","selector":"img"},"imgAlt":{"type":"string","source":"attribute","attribute":"alt","selector":"img"},"alignDiv":{"type":"string"}},"textdomain":"myblock","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"create-block/myblock","version":"0.1.0","title":"My Block","category":"widgets","icon":"smiley","description":"Example block scaffolded with Create Block tool.","supports":{"html":false,"align":["left","center","right"]},"attributes":{"title1":{"type":"string","source":"html","selector":"title1"},"title2":{"type":"string","source":"html","selector":".title2"},"description":{"type":"string","source":"html","selector":".description"},"btncta":{"type":"string","source":"html","selector":".btncta"},"imgID":{"type":"number","default":null},"imgURL":{"type":"string","source":"attribute","attribute":"src","selector":"img"},"imgAlt":{"type":"string","source":"attribute","attribute":"alt","selector":"img"},"alignImg":{"type":"string"}},"textdomain":"myblock","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
 
 /***/ })
 

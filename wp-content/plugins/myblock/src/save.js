@@ -18,34 +18,25 @@ import { Button } from "@wordpress/components";
  */
 export default function save(props) {
   const blockProps = useBlockProps.save();
-  const { imgURL, imgAlt, title1, title2, description, btncta } =
+  const { alignImg, imgURL, imgAlt, title1, title2, description, btncta } =
     props.attributes;
   return (
     <div className="container-myblock" {...blockProps}>
-      <div className="first-div-myblock" style={ { textAlign: props.attributes.alignDiv } }>
+      <div
+        className="first-div-myblock"
+        style={{ textAlign: alignImg }}
+      >
         <img src={imgURL} alt={imgAlt} />
       </div>
       <div className="second-div-myblock">
-        <RichText.Content
-          tagName="h1"
-          className="title1"
-          value={title1}
-        />
-        <RichText.Content
-          tagName="h3"
-          className="title2"
-          value={title2}
-        />
+        <RichText.Content tagName="h1" className="title1" value={title1} />
+        <RichText.Content tagName="h3" className="title2" value={title2} />
         <RichText.Content
           tagName="p"
           className="description"
           value={description}
         />
-        <RichText.Content
-          tagName="button"
-          className="btncta"
-          value={btncta}
-        />
+        <RichText.Content tagName="button" className="btncta" value={btncta} />
       </div>
     </div>
   );
